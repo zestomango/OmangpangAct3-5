@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 function ProductGrid({ products, showActions = false, onEdit, onDelete }) {
   if (products.length === 0) {
     return (
-      <div className="rounded-xl border-2 border-dashed border-[#2a475e] bg-[#171d25] py-20 text-center text-[#8f98a0]">
+      <div className="rounded-2xl border-2 border-dashed border-slate-300 py-20 text-center text-slate-400">
         No products yet.
       </div>
     );

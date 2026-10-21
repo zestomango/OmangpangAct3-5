@@ -73,14 +73,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#101822] text-[#c7d5e0]">
+    <div className="min-h-screen bg-slate-50 text-slate-800">
       <Navbar view={view} onChangeView={setView} />
 
       {error && (
         <div className="mx-auto mt-6 max-w-6xl px-6">
-          <p className="rounded-xl bg-[#c23838]/20 border border-[#c23838]/40 p-4 text-sm text-[#ff8080]">
-            {error}
-          </p>
+          <p className="rounded-xl bg-red-50 p-4 text-red-600">{error}</p>
         </div>
       )}
 
@@ -97,8 +95,8 @@ function App() {
         />
       )}
 
-      <footer className="py-10 text-center text-sm text-[#8f98a0]">
-        Made by Marc Kristian Omangpang · BSIT
+      <footer className="py-10 text-center text-sm text-slate-400">
+        Made by Marc Kristian Omangpang · INF 239
       </footer>
     </div>
   );

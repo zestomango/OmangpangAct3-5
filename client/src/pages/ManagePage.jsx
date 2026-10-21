@@ -19,8 +19,8 @@ function ManagePage({
       />
 
       <section>
-        <h2 className="mb-5 text-2xl font-bold text-white">
-          Manage Products <span className="text-[#66c0f4]">({products.length})</span>
+        <h2 className="mb-5 text-2xl font-bold text-slate-900">
+          Manage Products <span className="text-indigo-600">({products.length})</span>
         </h2>
         <ProductGrid
           products={products}

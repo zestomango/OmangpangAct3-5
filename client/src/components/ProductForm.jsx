@@ -3,8 +3,8 @@ import ImageUpload from "./ImageUpload";
 
 const emptyForm = { name: "", price: "", description: "", image: "" };
 const inputClass =
-  "w-full rounded-xl border border-[#2a475e] bg-[#101822] px-4 py-3 text-white placeholder-[#626c75] outline-none " +
-  "transition focus:border-[#66c0f4] focus:ring-2 focus:ring-[#66c0f4]/20";
+  "w-full rounded-xl border border-slate-300 px-4 py-3 outline-none " +
+  "transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100";
 
 function ProductForm({ editingProduct, onSubmit, onCancel }) {
   const [form, setForm] = useState(editingProduct || emptyForm);
@@ -46,9 +46,9 @@ function ProductForm({ editingProduct, onSubmit, onCancel }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4 rounded-2xl bg-[#1b2838] border border-[#2a475e] p-6 shadow-md lg:sticky lg:top-24"
+      className="space-y-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 lg:sticky lg:top-24"
     >
-      <h2 className="text-xl font-bold text-white">
+      <h2 className="text-xl font-bold text-slate-900">
         {editingProduct ? "Edit Product" : "Add Product"}
       </h2>
 
@@ -84,16 +84,14 @@ function ProductForm({ editingProduct, onSubmit, onCancel }) {
       />
 
       {error && (
-        <p className="rounded-xl bg-[#c23838]/20 border border-[#c23838]/40 p-3 text-sm text-[#ff8080]">
-          {error}
-        </p>
+        <p className="rounded-xl bg-red-50 p-3 text-sm text-red-600">{error}</p>
       )}
 
       <div className="flex gap-2">
         <button
           type="submit"
           disabled={saving}
-          className="flex-1 rounded-xl bg-[#66c0f4] py-3 font-semibold text-[#101822] transition hover:bg-[#52ade2] disabled:opacity-50"
+          className="flex-1 rounded-xl bg-indigo-600 py-3 font-semibold text-white transition hover:bg-indigo-700 disabled:opacity-50"
         >
           {saving ? "Saving..." : editingProduct ? "Update" : "Add Product"}
         </button>
@@ -101,7 +99,7 @@ function ProductForm({ editingProduct, onSubmit, onCancel }) {
           <button
             type="button"
             onClick={onCancel}
-            className="flex-1 rounded-xl bg-[#2a475e] py-3 font-semibold text-white transition hover:bg-[#385873]"
+            className="flex-1 rounded-xl bg-slate-100 py-3 font-semibold text-slate-700 transition hover:bg-slate-200"
           >
             Cancel
           </button>
