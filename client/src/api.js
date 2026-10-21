@@ -1,4 +1,5 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const rawUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = rawUrl.replace(/\/+$/, "");
 
 if (!import.meta.env.VITE_API_URL) {
   console.warn("VITE_API_URL is not explicitly set; defaulting to http://localhost:5000. Configure client/.env or Vercel settings when deploying.");

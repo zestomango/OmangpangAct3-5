@@ -15,6 +15,7 @@ function App() {
   useEffect(() => {
     getProducts()
       .then((data) => {
+        setError("");
         if (Array.isArray(data) && data.length > 0) {
           setProducts(data);
         } else {
