@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  
+  --color-steam-darkest: #101822;
+  --color-steam-base: #171d25;
+  --color-steam-panel: #1b2838;
+  --color-steam-card: #212c3d;
+  --color-steam-border: #2a475e;
+  --color-steam-border-light: #385873;
+  --color-steam-blue: #66c0f4;
+  --color-steam-blue-hover: #52ade2;
+  --color-steam-text-main: #f1f5f9;
+  --color-steam-text-muted: #8f98a0;
+  --color-steam-green: #a4d007;
+  --color-steam-red: #c23838;
+}
+
+/* Steam-styled scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101822;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a475e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #385873;
+}
